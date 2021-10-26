@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ads</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <div id="app" style="fontSize:17px;color:red;">{{hh}}
+    <p class="p">wo shi pi</p>
+    <instance-component></instance-component>
+  </div>
+  <script src="./dist/umd/vue.js"></script>
+  <script>
+    let vm = new Vue({
+      el: "#app",
+      components:{
+        "instance-component":{
+          template:"<div id='div-instance-component'>{{a}}</div>",
+          data:{
+            a:1
+          }
+        }
+      },
+      data() {
+        return {
+          hh: 123,
+          firstName: '田',
+          lastName: "浩伟"
+        }
+      },
+      watch: {
+        "hh" (newValue, oldValue) {
+          console.log(123);
+        }
+      }
+      
+    })
+  
+  </script>
+</body>
+
+</html>
